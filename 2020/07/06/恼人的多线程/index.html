@@ -7,17 +7,17 @@
   
   <title>恼人的多线程 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="多线程是计算机科学里面绕不开的话题。所以我汇总了一下我看过的资料，希望能在这个问题上持续的努力。 PART I 基础概念科普和基本的demo 要求:一些java 的语法和概念。  并发编程网的系列博客 123456789101112131415161718&amp;#123;% note info %&amp;#125;阅读笔记：１　Java并发性和多线程介绍２　多线程的优点３　多线程的代价４　并发编程模型这四篇">
+  <meta name="description" content="多线程是计算机科学里面绕不开的话题。所以我汇总了一下我看过的资料，希望能在这个问题上持续的努力。 PART I 基础概念科普和基本的demo 要求:一些java 的语法和概念。  并发编程网的系列博客 12345678910111213141516阅读笔记：１　Java并发性和多线程介绍２　多线程的优点３　多线程的代价４　并发编程模型这四篇属于背景科普，并发编程模型里面的模型其实一开始只要浏览一下">
 <meta property="og:type" content="article">
 <meta property="og:title" content="恼人的多线程">
 <meta property="og:url" content="http://yoursite.com/2020/07/06/恼人的多线程/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="多线程是计算机科学里面绕不开的话题。所以我汇总了一下我看过的资料，希望能在这个问题上持续的努力。 PART I 基础概念科普和基本的demo 要求:一些java 的语法和概念。  并发编程网的系列博客 123456789101112131415161718&amp;#123;% note info %&amp;#125;阅读笔记：１　Java并发性和多线程介绍２　多线程的优点３　多线程的代价４　并发编程模型这四篇">
+<meta property="og:description" content="多线程是计算机科学里面绕不开的话题。所以我汇总了一下我看过的资料，希望能在这个问题上持续的努力。 PART I 基础概念科普和基本的demo 要求:一些java 的语法和概念。  并发编程网的系列博客 12345678910111213141516阅读笔记：１　Java并发性和多线程介绍２　多线程的优点３　多线程的代价４　并发编程模型这四篇属于背景科普，并发编程模型里面的模型其实一开始只要浏览一下">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2020-07-06T19:22:40.238Z">
+<meta property="og:updated_time" content="2020-07-06T19:25:36.444Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="恼人的多线程">
-<meta name="twitter:description" content="多线程是计算机科学里面绕不开的话题。所以我汇总了一下我看过的资料，希望能在这个问题上持续的努力。 PART I 基础概念科普和基本的demo 要求:一些java 的语法和概念。  并发编程网的系列博客 123456789101112131415161718&amp;#123;% note info %&amp;#125;阅读笔记：１　Java并发性和多线程介绍２　多线程的优点３　多线程的代价４　并发编程模型这四篇">
+<meta name="twitter:description" content="多线程是计算机科学里面绕不开的话题。所以我汇总了一下我看过的资料，希望能在这个问题上持续的努力。 PART I 基础概念科普和基本的demo 要求:一些java 的语法和概念。  并发编程网的系列博客 12345678910111213141516阅读笔记：１　Java并发性和多线程介绍２　多线程的优点３　多线程的代价４　并发编程模型这四篇属于背景科普，并发编程模型里面的模型其实一开始只要浏览一下">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -91,7 +91,7 @@
 <li><p>要求:一些java 的语法和概念。</p>
 </li>
 <li><p><a href="http://ifeve.com/java-concurrency-thread-directory/" target="_blank" rel="noopener">并发编程网的系列博客</a></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">&#123;% note info %&#125;</span><br><span class="line">阅读笔记：</span><br><span class="line">１　Java并发性和多线程介绍</span><br><span class="line">２　多线程的优点</span><br><span class="line">３　多线程的代价</span><br><span class="line">４　并发编程模型</span><br><span class="line">这四篇属于背景科普，并发编程模型里面的模型其实一开始只要浏览一下，知道一点就好</span><br><span class="line"></span><br><span class="line">5 如何创建并运行java线程 (java 的多线程语法)</span><br><span class="line">6 竞态条件与临界区</span><br><span class="line">7 线程安全与共享资源</span><br><span class="line">8 线程安全及不可变性</span><br><span class="line">６，７，８　属于多线程的一些基本概念</span><br><span class="line">10 JAVA同步块 (同步块是比较基本的语法)</span><br><span class="line">14 死锁</span><br><span class="line">15 避免死锁 </span><br><span class="line">这两篇可以了解死锁的基本概念</span><br><span class="line">&#123;% endnote %&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">阅读笔记：</span><br><span class="line">１　Java并发性和多线程介绍</span><br><span class="line">２　多线程的优点</span><br><span class="line">３　多线程的代价</span><br><span class="line">４　并发编程模型</span><br><span class="line">这四篇属于背景科普，并发编程模型里面的模型其实一开始只要浏览一下，知道一点就好</span><br><span class="line"></span><br><span class="line">5 如何创建并运行java线程 (java 的多线程语法)</span><br><span class="line">6 竞态条件与临界区</span><br><span class="line">7 线程安全与共享资源</span><br><span class="line">8 线程安全及不可变性</span><br><span class="line">６，７，８　属于多线程的一些基本概念</span><br><span class="line">10 JAVA同步块 (同步块是比较基本的语法)</span><br><span class="line">14 死锁</span><br><span class="line">15 避免死锁 </span><br><span class="line">这两篇可以了解死锁的基本概念</span><br></pre></td></tr></table></figure>
 </li>
 <li><p><a href="https://github.com/oldratlee/fucking-java-concurrency" target="_blank" rel="noopener">fucking-java-concurrency</a></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">通过Demo演示出Java中并发问题。</span><br></pre></td></tr></table></figure>
@@ -119,7 +119,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/07/06/恼人的多线程/" data-id="ckcaw70ce0006m6gkzp4k7tct" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/07/06/恼人的多线程/" data-id="ckcaw98xt0002sogkgmxclz77" class="article-share-link">Share</a>
       
       
     </footer>
